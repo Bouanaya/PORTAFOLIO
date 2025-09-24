@@ -11,7 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return ( 
-    <header className="w-full bg-white shadow-md px-8 py-2 flex justify-between items-center ">
+    <header className="w-full bg-primary border-l  shadow-md px-8 py-2 flex justify-between items-center ">
       <div className="flex gap-6">
       {MenuName.map((name, i) => {
         // convert name to URL path
@@ -25,7 +25,7 @@ export default function Navbar() {
   }
 
         return (
-          <Button key={i} className={isActive ? 'bg-green-300' : ''} disabled ={isActive} >
+          <Button key={i} className={isActive ? 'bg-white text-black' : ''} disabled ={isActive} >
             <NavLink href={href} className="px-3 py-2 rounded-md ">
               {name}
             </NavLink>
@@ -35,7 +35,7 @@ export default function Navbar() {
       
       </div>
       <div className="flex items-center">
-        <Button className='bg-gradient-to-r from-white via-black/20 to-black'>
+        <Button className='gradient'>
             <Image src={modeIcon} width={20} height={20} alt="Mode toggle" />
         </Button>
    

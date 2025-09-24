@@ -200,3 +200,6 @@
     @apply bg-background text-foreground;
   }
 }
+.gradient {
+  background: conic-gradient(at bottom, #535052, #a489a7, #f4e3f7);
+}
