@@ -5,13 +5,14 @@ import { Button } from './ui/button';
 import NavLink from 'next/link'; // or your custom NavLink
 import { usePathname } from 'next/navigation';
 import modeIcon from '/public/mode.svg'
+import Themes from "@/components/Theme";
 
 export default function Navbar() {
   const MenuName = ['Accueil', 'A propos', 'Projets', 'Contact'];
   const pathname = usePathname();
 
   return ( 
-    <header className="w-full bg-primary border-l  shadow-md px-8 py-2 flex justify-between items-center ">
+    <header className="w-full dark:bg-background bg-background border-l  shadow-md px-8 py-2 flex justify-between items-center ">
       <div className="flex gap-6">
       {MenuName.map((name, i) => {
         // convert name to URL path
@@ -25,7 +26,7 @@ export default function Navbar() {
   }
 
         return (
-          <Button key={i} className={isActive ? 'bg-white text-black' : ''} disabled ={isActive} >
+          <Button key={i} className={isActive ? 'dark:bg-violet-500 bg-black dark:text-black text-white' : ''} disabled ={isActive} >
             <NavLink href={href} className="px-3 py-2 rounded-md ">
               {name}
             </NavLink>
@@ -35,9 +36,10 @@ export default function Navbar() {
       
       </div>
       <div className="flex items-center">
-        <Button className='gradient'>
-            <Image src={modeIcon} width={20} height={20} alt="Mode toggle" />
-        </Button>
+     
+            {/* <Image src={modeIcon} width={20} height={20} alt="Mode toggle" /> */}
+            <Themes/>
+ 
    
       </div>
     </header>
