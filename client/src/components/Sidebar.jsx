@@ -25,7 +25,7 @@ export default function ProfileAside() {
 </h2>
 
       <span className="mt-2 px-3 py-1 text-sm rounded-md bg-gray-800 text-white  ">
-        Front-End Developer web
+        Développeur Web Front-End
       </span>
 
       <hr className="w-full border-gray-700 my-6" />
@@ -33,8 +33,8 @@ export default function ProfileAside() {
       {/* Contact Info */}
       <div className="space-y-2 w-full">
         {/* Email */}
-        <div className="flex items-center space-x-3 bg-gray-900 p-3 rounded-xl">
-          <Mail className="text-white w-5 h-5" />
+        <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
+          <Mail className="text-violet-800 w-5 h-5 " />
           <div>
             <p className="text-xs text-gray-400">EMAIL</p>
             <p className="text-sm truncate text-white ">BouanayaSoufiane@gmail.com</p>
@@ -42,8 +42,8 @@ export default function ProfileAside() {
         </div>
 
         {/* Phone */}
-        <div className="flex items-center space-x-3 bg-gray-900 p-3 rounded-xl">
-          <Phone className="text-white w-5 h-5" />
+        <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
+          <Phone className="text-violet-800 w-5 h-5" />
           <div>
             <p className="text-xs text-gray-400">PHONE</p>
             <p className="text-sm truncate text-white ">0673731912</p>
@@ -51,8 +51,8 @@ export default function ProfileAside() {
         </div>
 
         {/* Birthday */}
-        <div className="flex items-center space-x-3 bg-gray-900 p-3 rounded-xl">
-          <Calendar className="text-white w-5 h-5" />
+        <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
+          <Calendar className="text-violet-800 w-5 h-5" />
           <div>
             <p className="text-xs text-gray-400">ANNIVERSAIRE</p>
             <p className="text-sm truncate text-white ">Nov 20, 1998</p>
@@ -60,8 +60,8 @@ export default function ProfileAside() {
         </div>
 
              {/* Location */}
-        <div className="flex items-center space-x-3 bg-gray-900 p-3 rounded-xl">
-          <MapPinHouse className="text-white w-5 h-5" />
+        <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
+          <MapPinHouse className="text-violet-800 w-5 h-5" />
           <div>
             <p className="text-xs text-gray-400">Location</p>
             <p className="text-sm truncate text-white ">Skhirat , Maroc</p>

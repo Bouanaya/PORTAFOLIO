@@ -6,7 +6,6 @@ import NavLink from 'next/link'; // or your custom NavLink
 import { usePathname } from 'next/navigation';
 import modeIcon from '/public/mode.svg'
 import Themes from "@/components/Theme";
-
 export default function Navbar() {
   const MenuName = ['Accueil', 'A propos', 'Projets', 'Contact'];
   const pathname = usePathname();
@@ -26,7 +25,7 @@ export default function Navbar() {
   }
 
         return (
-          <Button key={i} className={isActive ? 'dark:bg-violet-500 bg-black dark:text-black text-white' : ''} disabled ={isActive} >
+          <Button key={i} className={isActive ? 'dark:bg-violet-500 bg-black  text-white' : ''} disabled ={isActive} >
             <NavLink href={href} className="px-3 py-2 rounded-md ">
               {name}
             </NavLink>

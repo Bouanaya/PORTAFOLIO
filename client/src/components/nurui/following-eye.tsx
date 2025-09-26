@@ -16,7 +16,7 @@ const FollowingEye = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "  flex justify-center items-center rounded-xl",
+        "  h-[100px] flex justify-center items-center rounded-xl",
         className,
       )}
       onMouseMove={handleMouseMove}
