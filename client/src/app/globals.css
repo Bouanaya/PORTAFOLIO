@@ -217,5 +217,9 @@
 }
 
  
-
+.md-b {
+    @media (width >= 64rem /* 768px */) {
+        flex-basis: calc(1/2 * 90%) /* 50% */;
+    }
+}
  

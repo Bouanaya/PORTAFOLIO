@@ -7,7 +7,7 @@ export const infoProjects = [
         technologie: ["/technologie/vue.svg", "/technologie/tailwindcss.svg"],
         photoProj: "/E-Learning.png",
         description:
-            "Ce projet est une page d’atterrissage (Landing Page) conçue spécialement pour une plateforme d’apprentissage en ligne ",
+            "Ce projet est une page d’atterrissage (Landing Page) conçue spécialement pour une plateforme d’apprentissage en ligne E-Learning ",
         link: "https://e-learning-tan-seven.vercel.app/",
         linkName: "e-learning-tan-seven.vercel.app/",
         People: [
@@ -56,6 +56,8 @@ export const infoProjects = [
 
         ]
     },
+    
+ 
      
    
 
