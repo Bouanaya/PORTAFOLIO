@@ -20,7 +20,7 @@ export default function ProfileAside() {
       {/* Name */}
 <h2 className="mt-4 text-2xl font-bold bg-clip-text text-transparent 
   bg-gradient-to-tr from-black via-black to-black 
-  dark:from-black dark:via-white dark:to-black">
+  dark:from-black dark:via-white dark:to-black whitespace-nowrap">
   BOUANAYA SOUFIANE
 </h2>
 
