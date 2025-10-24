@@ -30,7 +30,7 @@ export default function ProjectsCarousel() {
       >
         <CarouselContent>
           {infoProjects.map((x, i) => (
-            <CarouselItem key={i} className="md:basis-1/2 basic-1/1 flex mt-10 md:mt-0 xl:h-1/3">
+            <CarouselItem key={i} className="md:basis-1/2 basic-1/1 flex  mt-10 md:mt-0 ">
               <div className="dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 bg-white/10 w-[80%]   md:w-full ">
                 {/* 🔸 Titre + technologies */}
                 <div className="flex justify-between items-center mb-3">
@@ -49,7 +49,7 @@ export default function ProjectsCarousel() {
                 </div>
 
                 {/* 🔸 Description */}
-                <p className="text-sm p-1 text-violet-300">{x.description}</p>
+                <p className="text-sm p-1 text-violet-300 bg-clip-text">{x.description}</p>
 
                 {/* 🔸 Image avec Lens */}
                 <figure className="mt-2">
