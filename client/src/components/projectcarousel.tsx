@@ -14,16 +14,8 @@ import { infoProjects } from "@/db/infoProjets";
 
 const TECHNOLOGIES = [
   "Vue",
-  "Tailwind",
-  "Pinia",
-  "TypeScript",
   "React",
-  "Next.js",
-  "Redis",
-  "MongoDB",
-  "Cloudflare",
-  "SQL",
-  "PHP",
+  "Next.js"
 ];
 
 export default function CarouselFilter() {
@@ -39,7 +31,7 @@ export default function CarouselFilter() {
     : infoProjects;
 
   return (
-    <div className="w-full flex flex-col items-center gap-5">
+    <div className="max-w-[70%] w-full flex flex-col items-center gap-5">
       {/* 🔹 FILTER BAR */}
       <div className="flex flex-wrap justify-center gap-3 mb-6">
         {TECHNOLOGIES.map((tech) => (
@@ -63,7 +55,7 @@ export default function CarouselFilter() {
       {/* 🔹 CAROUSEL */}
       <Carousel
         opts={{ align: "start" }}
-        className="w-full max-w-[90%] overflow-hidden"
+        className=" w-full max-w-[60%] bg-amber-100 overflow-hidden"
       >
         <CarouselContent>
           {filteredProjects.length === 0 ? (

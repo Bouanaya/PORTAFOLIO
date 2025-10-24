@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillsSection = () => {
   return (
-    <div className="  text-white overflow-hidden">
+    <div className="  text-white  ">
       {/* Background gradient overlay */}
      
       

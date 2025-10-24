@@ -11,7 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return ( 
-    <header className="w-full dark:bg-background bg-background border-l  shadow-md px-8 py-2 flex justify-between items-center ">
+    <header className="w-full dark:bg-background bg-background border-l  shadow-md px-8 py-2 hidden md:flex justify-between items-center ">
       <div className="flex gap-6">
       {MenuName.map((name, i) => {
         // convert name to URL path

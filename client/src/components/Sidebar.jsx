@@ -5,7 +5,7 @@ import Image from 'next/image'
  
 export default function ProfileAside() {
   return (
-    <aside className="dark:bg-background bg-background dark:text-white text-black w-80   p-6 flex flex-col items-center shadow-2xl">
+    <aside className="dark:bg-background bg-background dark:text-white text-black w-80   p-6 hidden md:flex flex-col items-center shadow-2xl">
       {/* Avatar */}
       <div className="w-50 h-50 rounded-2xl overflow-hidden bg-gray-800 flex items-center justify-center">
         <Image
