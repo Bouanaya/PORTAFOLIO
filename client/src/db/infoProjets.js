@@ -55,11 +55,8 @@ export const infoProjects = [
       {
         imageUrl: "https://avatars.githubusercontent.com/u/107013005?v=4",
         profileUrl: "https://github.com/Bouanaya",
-      },
-      {
-        imageUrl: "https://avatars.githubusercontent.com/u/62668827?v=4",
-        profileUrl: "https://github.com/essofyany",
-      },
+      }
+     
     ],
   },
   {
@@ -84,27 +81,31 @@ export const infoProjects = [
       },
     ],
   },
-  //  {
-  //   nameProj: "Ayo-Health",
-  //   colorname: "text-blue-500",
-  //   technologie: [
-  //     "/technologie/nextjs.svg",
-  //     "/technologie/tailwindcss.svg",
-  //     "/technologie/zod.svg",
-  //     "/technologie/redis.svg"
-  //     ,
-  //   ],
-  //   technologieNames: ["nextjs", "Tailwind", "zod",'redis'], // 👈 ajout
-  //   photoProj: "/ayohelth.png",
-  //   description:
-  //     "J’ai développé une application web avec Vue.js et Tailwind CSS. Les données sont stockées et mises à jour via Google Sheets.",
-  //   link: "https://the-bag-three.vercel.app/",
-  //   linkName: "the-bag-three.vercel.app/",
-  //   People: [
-  //     {
-  //       imageUrl: "https://avatars.githubusercontent.com/u/107013005?v=4",
-  //       profileUrl: "https://github.com/Bouanaya",
-  //     },
-  //   ],
-  // }
+   {
+    nameProj: "Ayo-Health",
+    colorname: "text-blue-500",
+    technologie: [
+      "/technologie/Next.js.svg",
+      "/technologie/tailwindcss.svg",
+      "/technologie/zod.svg",
+      "/technologie/redis.svg"
+      ,
+    ],
+    technologieNames: ["nextjs", "Tailwind", "zod",'redis'], // 👈 ajout
+    photoProj: "/ayohelth.png",
+    description:
+      "Application web développée avec Next.js pour une clinique, incluant un formulaire validé, une API REST sécurisée et un cache Redis pour accélérer les requêtes et adresses IP",
+    link: "https://the-bag-three.vercel.app/",
+    linkName: "the-bag-three.vercel.app/",
+    People: [
+      {
+        imageUrl: "https://avatars.githubusercontent.com/u/107013005?v=4",
+        profileUrl: "https://github.com/Bouanaya",
+      },
+       {
+        imageUrl: "https://avatars.githubusercontent.com/u/62668827?v=4",
+        profileUrl: "https://github.com/essofyany",
+      },
+    ],
+  }
 ];

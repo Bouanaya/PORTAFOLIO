@@ -1,9 +1,12 @@
 import React from 'react'
 import Card from '@/components/Card'
+import { BackgroundRippleEffect } from '@/components/ui/background-ripple-effect'
 
 export default function page() {
   return (
-    <div className='w-full  bagColordark  h-full py-3 px-6 '>
+      <div className="relative flex  h-full min-h-screen w-full flex-col items-start justify-start ">
+              <BackgroundRippleEffect />
+    <div className='w-full h-full py-3 px-6 '>
       <div className=" pt-2  ">
         <h1 className='text-3xl  bg-gradient-to-r from-violet-500 via-blue-400 to-green-500 bg-clip-text text-transparent font-bold mb-2'>APROPOS :</h1>
 
@@ -12,6 +15,7 @@ export default function page() {
       
         <Card/>
     
+    </div>
     </div>
   )
 }

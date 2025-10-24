@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Main content */}
         <div className="flex-1 flex flex-col">
           <Navbar />
-          <main className="flex-1  md:overflow-y-auto">{children}</main>
+          <main className="flex-1  md:overflow-y-auto dark:bg-black bg-white">{children}</main>
        
         </div>
         </ThemeProvider>

@@ -204,16 +204,17 @@
   background: conic-gradient(at bottom, #535052, #a489a7, #f4e3f7);
 }
 
-.bagColordark{
-  
-      background: 
-         radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000
-      
-    
-}
+@layer components {
+  .bagColordark {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,0.25) 0%, transparent 70%),
+      #000000;
+  }
 
-.bagColorlight{
-    background: radial-gradient(125% 125% at 50% 90%, #fff 40%, #7c3aed 100%)
+  .bagColorlight {
+    background:
+      radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #7c3aed 100%);
+  }
 }
 
  
