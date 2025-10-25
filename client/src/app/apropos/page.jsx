@@ -6,7 +6,7 @@ export default function page() {
   return (
       <div className="relative flex  h-full min-h-screen w-full flex-col items-start justify-start ">
               <BackgroundRippleEffect />
-    <div className='w-full h-full py-3 px-6 '>
+    <div className='w-full absolute z-10 h-full py-3 px-6  overflow-hidden'>
       <div className=" pt-2  ">
         <h1 className='text-3xl  bg-gradient-to-r from-violet-500 via-blue-400 to-green-500 bg-clip-text text-transparent font-bold mb-2'>APROPOS :</h1>
 
