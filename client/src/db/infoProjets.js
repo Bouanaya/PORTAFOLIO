@@ -69,7 +69,7 @@ export const infoProjects = [
       ,
     ],
     technologieNames: ["Vue", "Tailwind", "sheets"], // 👈 ajout
-    photoProj: "/OneFit.png",
+    photoProj: "/oneFit.png",
     description:
       "J’ai développé une application web avec Vue.js et Tailwind CSS. Les données sont stockées et mises à jour via Google Sheets.",
     link: "https://the-bag-three.vercel.app/",
