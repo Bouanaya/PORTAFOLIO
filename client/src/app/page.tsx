@@ -7,7 +7,7 @@ export default function page() {
   return (
       <div className="relative flex h-full min-h-screen w-full flex-col items-start justify-start ">
               <BackgroundRippleEffect />
-      <div className="flex justify-center items-center h-full px-6 ">
+      <div className="flex absolute z-10 justify-center items-center h-full px-6 ">
         <div className="text-center space-y-3">
           <FollowingEye />
           <span className="uppercase tracking-widest text-xs text-center bg-gradient-to-r from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent  ">
