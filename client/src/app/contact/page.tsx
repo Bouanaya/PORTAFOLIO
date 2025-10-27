@@ -1,6 +1,6 @@
 'use client'
  import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
- import {ContactForm} from "./ContactForm"
+ import ContactForm from "@/app/contact/ContactForm"
 export default function page() {
   return (
       <div className="relative flex h-full min-h-screen w-full flex-col items-start justify-start ">

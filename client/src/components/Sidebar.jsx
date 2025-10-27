@@ -5,7 +5,7 @@ import Image from 'next/image'
  
 export default function ProfileAside() {
   return (
-    <aside className="dark:bg-background bg-background dark:text-white text-black w-80   p-6 hidden md:flex flex-col items-center shadow-2xl">
+    <aside className="dark:bg-background bg-background dark:text-white text-black w-80 border-r-2 border-black    p-6 hidden md:flex flex-col items-center shadow-2xl">
       {/* Avatar */}
       <div className="w-50 h-50 rounded-2xl overflow-hidden bg-gray-800 flex items-center justify-center">
         <Image
@@ -36,7 +36,7 @@ export default function ProfileAside() {
         <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
           <Mail className="text-violet-800 w-5 h-5 " />
           <div>
-            <p className="text-xs text-gray-400">EMAIL</p>
+            <p className="text-xs text-black  dark:text-gray-400">EMAIL</p>
             <p className="text-sm truncate text-white ">BouanayaSoufiane@gmail.com</p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function ProfileAside() {
         <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
           <Phone className="text-violet-800 w-5 h-5" />
           <div>
-            <p className="text-xs text-gray-400">PHONE</p>
+            <p className="text-xs text-black  dark:text-gray-400">PHONE</p>
             <p className="text-sm truncate text-white ">0673731912</p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function ProfileAside() {
         <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
           <Calendar className="text-violet-800 w-5 h-5" />
           <div>
-            <p className="text-xs text-gray-400">ANNIVERSAIRE</p>
+            <p className="text-xs text-black  dark:text-gray-400">ANNIVERSAIRE</p>
             <p className="text-sm truncate text-white ">Nov 20, 1998</p>
           </div>
         </div>
@@ -63,8 +63,8 @@ export default function ProfileAside() {
         <div className="flex items-center space-x-3 bg-gray-900/50 backdrop-blur-sm p-3 rounded-xl">
           <MapPinHouse className="text-violet-800 w-5 h-5" />
           <div>
-            <p className="text-xs text-gray-400">Location</p>
-            <p className="text-sm truncate text-white ">Skhirat , Maroc</p>
+            <p className="text-xs text-black  dark:text-gray-400 uppercase">Location</p>
+            <p className="text-sm truncate text-white ">Skhirat-Temara , Maroc</p>
           </div>
         </div>
       </div>

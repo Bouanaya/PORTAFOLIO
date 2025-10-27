@@ -11,7 +11,7 @@ const SkillsSection = () => {
           
           {/* Card 1: UI Design */}
           <div className="group relative">
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-purple-500/50 transition-all duration-300">
+            <div className="bg-gray-900/50  backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-purple-500/50 transition-all duration-300">
               
               {/* UI Design icon */}
               <div className="h-24 mb-6 flex items-center justify-center">
@@ -31,7 +31,7 @@ const SkillsSection = () => {
               </div>
               
               <div className="space-y-3">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">Design</p>
+                <p className="text-sm dark:text-gray-400 text-black uppercase tracking-wide ">Design</p>
                 <h3 className="text-2xl font-bold text-white">
                   UI Design
                 </h3>
@@ -44,7 +44,7 @@ const SkillsSection = () => {
 
           {/* Card 2: Frontend */}
           <div className="group relative">
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-blue-500/50 transition-all duration-300">
+            <div className="bg-gray-900/50  backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-blue-500/50 transition-all duration-300">
               
               {/* Frontend icon */}
               <div className="h-24 mb-6 flex items-center justify-center">
@@ -70,7 +70,7 @@ const SkillsSection = () => {
               </div>
               
               <div className="space-y-3">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">CLIENT SIDE</p>
+                <p className="text-sm dark:text-gray-400 text-black uppercase tracking-wide">CLIENT SIDE</p>
                 <h3 className="text-2xl font-bold text-white">
                   Frontend
                 </h3>
@@ -109,7 +109,7 @@ const SkillsSection = () => {
               </div>
               
               <div className="space-y-3">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">SERVER SIDE</p>
+                <p className="text-sm dark:text-gray-400 text-black uppercase tracking-wide">SERVER SIDE</p>
                 <h3 className="text-2xl font-bold text-white">
                   Backend
                 </h3>

@@ -16,56 +16,58 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-// ✅ Validation Schema
+// ✅ Validation Schema (بدون status)
 const formSchema = z.object({
   fullName: z.string().min(3, { message: "Le nom complet doit contenir au moins 3 caractères." }),
   email: z.string().email({ message: "Adresse e-mail invalide." }),
   phone: z.string().min(10, { message: "Numéro de téléphone invalide." }),
-  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères." }),
+  remarque: z.string().min(3, { message: "La remarque doit contenir au moins 3 caractères." }),
 })
 
-export function ContactForm() {
+export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { fullName: "", email: "", phone: "", message: "" },
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      remarque: "",
+    },
   })
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState("")
 
-async function onSubmit(values: z.infer<typeof formSchema>) {
-  setIsLoading(true)
-  try {
-    const res = await fetch("api/send-email", {
-      method: "POST",
-      headers: { "Content-Type":"application/json" },
-      body: JSON.stringify(values),
-    })
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true)
+    setError("")
+    setSuccess(false)
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
 
-    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
-    const data: { success: boolean; message?: string } = await res.json()
+      const data = await res.json()
 
-    if (data.success) {
-      setSent(true)
+      if (!res.ok || !data.success) throw new Error(data.message || "Erreur d’envoi")
+
+      setSuccess(true)
       form.reset()
-      alert("✅ Message envoyé avec succès !")
-    } else {
-      throw new Error(data.message || "Failed to send email")
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
-  } catch (error: unknown) {
-    if (error instanceof Error) alert(`❌ Error: ${error.message}`)
-    else alert("❌ Unknown error occurred")
-  } finally {
-    setIsLoading(false)
   }
-}
-
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 max-w-md border-1 rounded-md bg-black/80 border-white p-6 m-auto"
+        className="space-y-6 max-w-md border rounded-md bg-black/80 border-white p-6 m-auto"
       >
         {/* Nom complet */}
         <FormField
@@ -75,7 +77,7 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
             <FormItem>
               <FormLabel>Nom complet</FormLabel>
               <FormControl>
-                <Input placeholder="Entrez votre nom" {...field} />
+                <Input placeholder="Entrez votre nom complet" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -112,16 +114,16 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
           )}
         />
 
-        {/* Message */}
+        {/* ✅ Remarque */}
         <FormField
           control={form.control}
-          name="message"
+          name="remarque"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Remarque</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Écrivez votre message ici..."
+                  placeholder="Ajoutez une remarque sur le site ou le portfolio..."
                   className="resize-none"
                   {...field}
                 />
@@ -131,15 +133,13 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Envoi en cours..." : "Envoyer le message"}
+        {/* Bouton */}
+        <Button type="submit" className="w-full" disabled={loading}>
+          {loading ? "Envoi en cours..." : "Envoyer"}
         </Button>
 
-        {sent && (
-          <p className="text-green-400 text-center mt-2">
-            ✅ Message envoyé avec succès !
-          </p>
-        )}
+        {error && <p className="text-red-500 text-center">{error}</p>}
+        {success && <p className="text-green-500 text-center">✅ Envoyé avec succès !</p>}
       </form>
     </Form>
   )

@@ -31,7 +31,7 @@ export default function ProjectsCarousel() {
         <CarouselContent>
           {infoProjects.map((x, i) => (
             <CarouselItem key={i} className="md:basis-1/2 basic-1/1 flex  mt-10 md:mt-0 ">
-              <div className="dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 bg-white/10 w-[80%]   md:w-full ">
+              <div className="dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 bg-black w-[80%]   md:w-full ">
                 {/* 🔸 Titre + technologies */}
                 <div className="flex justify-between items-center mb-3">
                   <h1 className={`text-3xl ${x.colorname}`}>{x.nameProj}</h1>
@@ -92,8 +92,8 @@ export default function ProjectsCarousel() {
         {/* 🔹 Controls */}
       
      <div className="md:flex gap-4  items-center mt-12 hidden ">
-         <CarouselPrevious className="text-violet-600" />
-        <CarouselNext className="text-violet-500" />
+         <CarouselPrevious className="text-violet-600 bg-black dark:bg-transparent" />
+        <CarouselNext className="text-violet-500 bg-black dark:bg-transparent" />
       </div>
     
         

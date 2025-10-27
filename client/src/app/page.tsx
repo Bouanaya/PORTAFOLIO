@@ -18,7 +18,7 @@ export default function page() {
           </h1>
           <h2 className="bg-clip-text 
            dark:bg-gradient-to-r dark:from-white dark:via-violet-500 dark:to-black
-           bg-gradient-to-r from-purple-400 via-pink-500 to-red-500  text-transparent">
+           bg-gradient-to-r from-purple-400 via-violet-500 to-red-500  text-transparent">
             Bonjour ! Je m’appelle Soufiane, Développeur web basé en Maroc.
           </h2>
           <div className="flex justify-center items-center gap-4 mt-10">
